@@ -1,0 +1,194 @@
+:root {
+    --background-color: rgb(240, 248, 255);
+    --silver-color: lightgrey;
+    --black-color: #131312;
+    --blue-color: #0017A8;
+    --green-color: #385E3C;
+}
+
+body {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: relative;
+    padding: .5rem 4rem;
+}
+
+.container header {
+    position: fixed;
+    width: calc(100% - 8rem);
+    left: 4rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.container header .logo {
+    width: 100px;
+}
+
+figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container header nav {
+    display: flex;
+    margin-inline-end: 1rem;
+    gap: 2rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.container main > section {
+    padding-block-start: 3.5rem;
+}
+
+.container main section.first-content {
+    display: flex;
+}
+
+.container main section.first-content figure img {
+    transform: scaleX(-1);
+}
+
+.container main section.first-content aside.left-content {
+    flex: 3;
+}
+
+.container main section.first-content aside.left-content .title-content {
+    font-size: 3rem;
+    width: 45%;
+}
+
+.container main section.first-content aside.left-content .text-content {
+    width: 51%;
+    line-height: 1.5rem;
+    font-size: .85rem;
+}
+
+.container main section.first-content aside.right-content {
+    flex: 2;
+}
+
+.container main section.first-content aside.right-content .carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner {
+    display: flex;
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure img {
+    min-height: 526px;
+    max-height: 526px;
+    overflow: hidden;
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure:last-child img {
+    min-height: 443px;
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .2rem .6rem .2rem 1.35rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+}
+
+section.first-content aside.right-content .carousel .carousel-inner figure figcaption::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure figcaption {
+    background-color: var(--silver-color);
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure:nth-child(2) figcaption {
+    background-color: var(--black-color);
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure:nth-child(3) figcaption {
+    background-color: var(--blue-color);
+}
+
+.container main section.first-content aside.right-content .carousel .carousel-inner figure:nth-child(4) figcaption {
+    background-color: var(--green-color);
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper .indicator {
+    display: inline-block;
+    width: 7px;
+    height: 30px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper .indicator:not(.active) {
+    transform: scale(.8);
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper .indicator.active {
+    transform: scale(1.2);
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper .indicator:first-child {
+    background-color: var(--silver-color);
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper .indicator:nth-child(2) {
+    background-color: var(--black-color);
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper .indicator:nth-child(3) {
+    background-color: var(--blue-color);
+}
+
+.container main section.first-content aside.right-content .carousel .indicator-wrapper .indicator:last-child {
+    background-color: var(--green-color);
+}
+
+.container main section.first-content aside.right-content div.bg-overlay {
+    position: absolute;
+    z-index: -1;
+    top: 2%;
+}
