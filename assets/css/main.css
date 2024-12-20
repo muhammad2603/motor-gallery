@@ -17,6 +17,21 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.title-content {
+    font-size: 3rem;
+    width: 45%;
+}
+
+.text-content {
+    width: 51%;
+    line-height: 1.5rem;
+    font-size: .85rem;
+}
+
+.indent {
+    text-indent: 1.2rem;
+}
+
 .container {
     position: relative;
     padding: .5rem 4rem;
@@ -63,17 +78,6 @@ figure {
 
 .container main section.first-content aside.left-content {
     flex: 3;
-}
-
-.container main section.first-content aside.left-content .title-content {
-    font-size: 3rem;
-    width: 45%;
-}
-
-.container main section.first-content aside.left-content .text-content {
-    width: 51%;
-    line-height: 1.5rem;
-    font-size: .85rem;
 }
 
 .container main section.first-content aside.right-content {
@@ -191,4 +195,73 @@ section.first-content aside.right-content .carousel .carousel-inner figure figca
     position: absolute;
     z-index: -1;
     top: 2%;
+}
+
+main section.second-content {
+    padding-block-start: 7rem;
+}
+
+main section.second-content article {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+}
+
+main section.second-content article .images-partnership {
+    width: 45%;
+    display: grid;
+    grid-template-areas: "img1 img2 img3"
+                         "img4 img5 span";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+main section.second-content article .images-partnership figure img {
+    object-fit: contain;
+}
+
+main section.second-content article .images-partnership figure:first-child {
+    grid-area: img1;
+}
+
+main section.second-content article .images-partnership figure:first-child img {
+    transform: scale(1.8);
+}
+
+main section.second-content article .images-partnership figure:nth-child(2) {
+    grid-area: img2;
+}
+
+main section.second-content article .images-partnership figure:nth-child(3) {
+    grid-area: img3;
+}
+
+main section.second-content article .images-partnership figure:nth-child(4) {
+    grid-area: img4;
+}
+
+main section.second-content article .images-partnership figure:last-child {
+    grid-area: img5;
+    height: 155px;
+}
+
+main section.second-content article .description {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main section.second-content article .description .title-content {
+    width: initial;
+    font-size: 1.5rem;
+}
+
+main section.second-content article .description .title-content h1 {
+    margin-bottom: .2rem;
+}
+
+main section.second-content article .description .text-content {
+    width: 90%;
+    text-align: justify;
 }
